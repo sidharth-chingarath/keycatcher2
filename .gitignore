@@ -1,1 +1,5 @@
 .env
+.venv
+/.idea
+src/observer/observer_file_pool/*
+src/target/target_file_pool/*
