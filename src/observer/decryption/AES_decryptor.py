@@ -10,7 +10,7 @@ print("key", key)
 
 
 # Decrypt the ciphertext
-with open("../observer_file_pool/decoded_binary_from_base64_binary.bin", "rb") as file:
+with open("../observer_file_pool/recieved_file.bin", "rb") as file:
     iv = file.read(16)
     ciphertext = file.read()
 
