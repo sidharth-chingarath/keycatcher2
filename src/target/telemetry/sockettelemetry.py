@@ -2,8 +2,8 @@ import socket
 import os
 
 class TargetSocketTelemetry:
-    def __init__(self):
-        self.FILE_PATH = "../target_file_pool/encrypted_file.bin"
+    def __init__(self,file_path):
+        self.FILE_PATH = file_path
         # Server configuration
         self.HOST = 'localhost'  # Receiver's IP address
         self.PORT = 12345  # Receiver's port
