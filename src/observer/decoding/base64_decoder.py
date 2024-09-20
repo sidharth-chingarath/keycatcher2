@@ -1,10 +1,10 @@
 import base64
 
 class Base64Decoding:
-    def __init__(self):
+    def __init__(self,recieved_file_path,decoded_file_path):
         # Path to the binary file
-        encoded_base64_binary_file_path = '../observer_file_pool/recieved_file.bin'
-        decoded_file_path = '../observer_file_pool/decoded_binary_from_base64_binary.bin'
+        self.encoded_base64_binary_file_path = recieved_file_path
+        self.decoded_file_path = decoded_file_path
 
     def b64_decode_function(self):
         # Read binary data from file

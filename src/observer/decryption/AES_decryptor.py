@@ -5,9 +5,9 @@ from Crypto.Util.Padding import pad, unpad
 
 
 class AESDecription:
-    def __init__(self) -> None:
-        self.write_path="../observer_file_pool/decrypted_file.txt"
-        self.read_path="../observer_file_pool/decoded_binary_from_base64_binary.bin"
+    def __init__(self,decoded_file_path,decrypted_file_path) -> None:
+        self.write_path=decrypted_file_path
+        self.read_path=decoded_file_path
 
     def decryption_method(self):
         key=b'5\x1ey5\xd5\xfeG\xa3\x97\xa0\x1b,\xdb\xe9\xda\xd2'
