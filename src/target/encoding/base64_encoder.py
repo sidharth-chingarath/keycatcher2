@@ -17,4 +17,3 @@ class Base64Encoding:
         with open(self.destination_path, 'wb') as write_file:
             write_file.write(encoded_data)
 
-    # The encoded_data can now be sent via email
