@@ -27,4 +27,4 @@ class TargetSocketTelemetry:
         client_socket.sendall(data)
 
         # Close the connection
-        client_socket.close()
+        # client_socket.close()
