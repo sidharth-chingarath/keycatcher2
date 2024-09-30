@@ -5,7 +5,7 @@ class TargetSocketTelemetry:
     def __init__(self,file_path):
         self.FILE_PATH = file_path
         # Server configuration
-        self.HOST = 'localhost'  # Receiver's IP address
+        self.HOST = '192.168.219.82'  # Receiver's IP address
         self.PORT = 12345  # Receiver's port
 
     def sender(self):

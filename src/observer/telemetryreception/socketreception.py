@@ -4,7 +4,7 @@ class ObserverSocketReception:
     def __init__(self,file_path):
         self.FILE_PATH=file_path
         # Server configuration
-        self.HOST = 'localhost'  # Server IP address
+        self.HOST = '192.168.219.82'  # Server IP address
         self.PORT = 12345  # Server port
 
     def reciever(self):
